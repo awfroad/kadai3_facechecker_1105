@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/replay.js"></script>
+    <style>
+        canvas, video{
+        border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <header>
+            <div>
+                <p>face checker</p>
+            </div>
+        </header>
+
+        
+        <!-- 見出し -->
+        <section class="title">
+
+            <h1>
+            Mind your face, Please take care of yourself!
+            </h1>
+            
+        </section>
+        
+        <main>
+            <!-- 写真撮影 -->
+            <section class="section__takePhoto">
+                
+                <p class="description">1.Take your photo.</p>
+                <video id="camera" width="400" height="300"></video>
+                <button type="button" id="shutter" class="btn1">Cheese !</button>
+
+                <!-- <audio id="se" preload="auto">
+                    <source src="camera-shutter1.mp3" type="audio/mp3">
+                </audio> -->
+        
+            </section>
+            
+            <!-- 写真保存&日付付与 -->
+            <section class="section__setPhoto">
+
+                <p class="description">2.Photo will be saved.</p>
+                <canvas id="picture" width="400" height="300"></canvas>
+            <!-- 取得した日付をアウトプットするためのpタグを用意 -->
+                <div>
+                    <p class="output-date-time"></p>
+                </div>
+            </section>
+            
+            <!-- 写真取り出し -->
+            <section class="section__getPhoto">
+            
+                <p class="description">3.Compare with the past.</p>
+                <canvas id="picture1" width="400" height="300"></canvas>
+                <div class="select_form">
+                    <!-- <label for="fruit" class="select_date">日付を選択してください</label> -->
+                    <input class="select_btn" type="button" value="Select a day" onclick="replay()"/>
+                    <select id="test" class="photo_archive js-archive">
+                        <!-- 日付情報を追加 -->""
+                    </select>
+                </div>
+                    <!-- <button type="button" id="replay" class="btn3 js-replay">replay</button> -->
+                    <!-- <table class="photo_archive js-archive">
+                    </table> -->
+                    
+                    <button type="button" id="clear" class="btn2 js-clear">Clear</button>
+            </section>
+        </main>
+
+        <footer>
+            <small>copyrights 2022 Cheese All RIghts Reserved.</small>
+        </footer>
+
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/clear.js"></script>
+
+</body>
+</html>
