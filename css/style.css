@@ -150,13 +150,6 @@ header p {
     background-color: #c2122aa8;
 }
 
-.btn3 {
-    bottom: 10%;
-    height: 50px;
-    width: 350px;
-    font-size: 3rem;
-    font-family: 'Dancing Script', cursive;
-}
 .select_form {
     display: flex;
     flex-direction: column;
