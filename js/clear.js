@@ -1,3 +1,7 @@
-document.querySelector(".js-clear").onclick = function(){
+let clear = document.querySelector(".js-clear")
+
+clear.onclick = function(){
     localStorage.clear();
+    $('.js-archive').empty();
+    document.location.reload()
 };
